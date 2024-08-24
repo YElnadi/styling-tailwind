@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import QuoteBox1 from "./QuoteBox1";
+import QuoteBox2 from "./QuoteBox2";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="flex flex-col items-center ">
       <QuoteBox1 quote={quote1} />
+      <QuoteBox2 quote={quote2}/>
     </div>
   );
 }
