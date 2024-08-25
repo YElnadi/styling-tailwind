@@ -4,6 +4,7 @@ import QuoteBox1 from "./QuoteBox1";
 import QuoteBox2 from "./QuoteBox2";
 import QuoteBox3 from "./QuoteBox3";
 import Header from "./Header";
+import SearchBar from "./SearchBar";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -26,8 +27,9 @@ function App() {
   return (
 
 
-    <div>
+    <div className="bg-orange-100 min-h-screen">
       <Header/>
+      <SearchBar/>
     </div>
     // <div className="flex flex-col items-center ">
     //   <QuoteBox1 quote={quote1} />
