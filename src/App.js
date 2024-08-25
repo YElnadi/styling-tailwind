@@ -5,6 +5,7 @@ import QuoteBox2 from "./QuoteBox2";
 import QuoteBox3 from "./QuoteBox3";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
+import Footer from "./Footer";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -30,6 +31,7 @@ function App() {
     <div className="h-screen flex flex-col">
       <Header/>
       <SearchBar/>
+      <Footer/>
     </div>
     // <div className="flex flex-col items-center ">
     //   <QuoteBox1 quote={quote1} />

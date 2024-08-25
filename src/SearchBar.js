@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex-1 flex flex-col justify-center items-center bg-orange-100 border-8 border-blue-500">
+    <div className="flex-1 flex flex-col justify-center items-center bg-orange-100 ">
       <div className=" text-8xl text-orange-500 mb-4">Google</div>
       <div className=" flex border w-[600px] p-4 rounded-full bg-orange-300 ">
         <i class="fa-solid fa-magnifying-glass text-xl text-orange-500 ml-1"></i>
