@@ -3,6 +3,7 @@ import "./App.css";
 import QuoteBox1 from "./QuoteBox1";
 import QuoteBox2 from "./QuoteBox2";
 import QuoteBox3 from "./QuoteBox3";
+import Header from "./Header";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -23,11 +24,16 @@ const quote3 = {
 };
 function App() {
   return (
-    <div className="flex flex-col items-center ">
-      <QuoteBox1 quote={quote1} />
-      <QuoteBox2 quote={quote2}/>
-      <QuoteBox3 quote={quote3}/>
+
+
+    <div>
+      <Header/>
     </div>
+    // <div className="flex flex-col items-center ">
+    //   <QuoteBox1 quote={quote1} />
+    //   <QuoteBox2 quote={quote2}/>
+    //   <QuoteBox3 quote={quote3}/>
+    // </div>
   );
 }
 
