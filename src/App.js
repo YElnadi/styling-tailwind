@@ -27,7 +27,7 @@ function App() {
   return (
 
 
-    <div className="bg-orange-100 min-h-screen">
+    <div className="h-screen flex flex-col">
       <Header/>
       <SearchBar/>
     </div>

@@ -2,20 +2,19 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex justify-center h-64 items-end text-[100px] text-orange-500">
-        Google
+    <div className="flex-1 flex flex-col justify-center items-center bg-orange-100 border-8 border-blue-500">
+      <div className=" text-8xl text-orange-500 mb-4">Google</div>
+      <div className=" flex border w-[600px] p-4 rounded-full bg-orange-300 ">
+        <i class="fa-solid fa-magnifying-glass text-xl text-orange-500 ml-1"></i>
+        <input className="flex-1 mx-1 bg-orange-300 " />
       </div>
-      <div className="border border-slat-200 w-[500px] p-4 rounded-l-full rounded-r-full bg-orange-300 ">
-        <i class="fa-solid fa-magnifying-glass text-xl text-orange-500"></i>
-      </div>
-      <div className="flex justify-between w-[400px] p-4 m-8 items-center">
-        <div>
-          <button className="border rounded-lg px-8 py-2 bg-purple-200 text-purple-600">Google Search</button>
-        </div>
-        <div>
-          <button className="border rounded-lg px-8 py-2 bg-purple-200 text-purple-600"> Image Search</button>
-        </div>
+      <div className="mt-4">
+        <button className="m-2 border rounded-lg px-4 py-2 bg-purple-200 text-purple-600">
+          Google Search
+        </button>
+        <button className="m-2 border rounded-lg px-4 py-2 bg-purple-200 text-purple-600">
+          Image Search
+        </button>
       </div>
     </div>
   );
