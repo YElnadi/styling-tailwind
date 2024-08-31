@@ -8,6 +8,7 @@ import SearchBar from "./SearchBar";
 import Footer from "./Footer";
 import LightSwitch from "./LightSwitch";
 import Counter from "./Counter";
+import Widget1 from "./Widget1";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -32,7 +33,12 @@ function App() {
     // <LightSwitch />
 
     //counter practice
-    <Counter/>
+    // <Counter/>
+
+    //conditional rendering practice
+    <div className="flex flex-col items-center m-4">
+      <Widget1/>
+    </div>
 
     // <div className="h-screen flex flex-col">
     //   <Header/>
