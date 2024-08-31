@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import LightSwitch from "./LightSwitch";
 import Counter from "./Counter";
 import Widget1 from "./Widget1";
+import Widget2 from "./Widget2";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -38,6 +39,7 @@ function App() {
     //conditional rendering practice
     <div className="flex flex-col items-center m-4">
       <Widget1/>
+      <Widget2/>
     </div>
 
     // <div className="h-screen flex flex-col">
