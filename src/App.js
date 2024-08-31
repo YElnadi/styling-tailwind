@@ -10,6 +10,7 @@ import LightSwitch from "./LightSwitch";
 import Counter from "./Counter";
 import Widget1 from "./Widget1";
 import Widget2 from "./Widget2";
+import Widget3 from "./Widget3";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -40,6 +41,7 @@ function App() {
     <div className="flex flex-col items-center m-4">
       <Widget1/>
       <Widget2/>
+      <Widget3/>
     </div>
 
     // <div className="h-screen flex flex-col">
