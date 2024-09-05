@@ -61,19 +61,19 @@ function App() {
       <div className="flex justify-center items-center">
         <NavButtons
           icon={"fa-chevron-left"}
+          show={imageIdx > 0}
           onClick={() => {
-            if (imageIdx > 0) {
-              setImageIdx(imageIdx - 1);
-            }
+            setImageIdx(imageIdx - 1);
           }}
         />
-        <DogCard dog={IMAGE_URLS[imageIdx]} />
+        <div className="flex items-center justify-center m-4">
+          <DogCard dog={IMAGE_URLS[imageIdx]} />
+        </div>
         <NavButtons
           icon={"fa-chevron-right"}
+          show={imageIdx < IMAGE_URLS.length - 1}
           onClick={() => {
-            if (imageIdx < IMAGE_URLS.length - 1) {
-              setImageIdx(imageIdx + 1);
-            }
+            setImageIdx(imageIdx + 1);
           }}
         />
       </div>
