@@ -13,6 +13,7 @@ import Widget2 from "./Widget2";
 import Widget3 from "./Widget3";
 import IMAGE_URLS from "./ImageCarousel/Images";
 import DogCard from "./ImageCarousel/DogCard";
+import NavButtons from "./ImageCarousel/NavButtons";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -55,7 +56,11 @@ function App() {
     // image carousel
     <div className="flex flex-col justify-center items-center mt-4">
       <div className="mb-4 text-cyan-300 text-3xl">Dog 1</div>
-      <DogCard dog={IMAGE_URLS[2]} />
+      <div className="flex justify-center items-center">
+        <NavButtons icon = {'fa-chevron-left'}/>
+        <DogCard dog={IMAGE_URLS[2]} />
+        <NavButtons icon = {'fa-chevron-right'}/>
+      </div>
     </div>
 
     // <div className="flex flex-col items-center ">
