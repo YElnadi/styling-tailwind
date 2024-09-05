@@ -14,6 +14,7 @@ import Widget3 from "./Widget3";
 import IMAGE_URLS from "./ImageCarousel/Images";
 import DogCard from "./ImageCarousel/DogCard";
 import NavButtons from "./ImageCarousel/NavButtons";
+import { useState } from "react";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -33,6 +34,7 @@ const quote3 = {
   bio: "Pioneer of Algorithm Analysis",
 };
 function App() {
+  const [imageIdx, setImageIdx] = useState(0);
   return (
     //light switch practice
     // <LightSwitch />
@@ -55,11 +57,25 @@ function App() {
 
     // image carousel
     <div className="flex flex-col justify-center items-center mt-4">
-      <div className="mb-4 text-cyan-300 text-3xl">Dog 1</div>
+      <div className="mb-4 text-cyan-300 text-3xl">Dog {imageIdx + 1}</div>
       <div className="flex justify-center items-center">
-        <NavButtons icon = {'fa-chevron-left'}/>
-        <DogCard dog={IMAGE_URLS[2]} />
-        <NavButtons icon = {'fa-chevron-right'}/>
+        <NavButtons
+          icon={"fa-chevron-left"}
+          onClick={() => {
+            if (imageIdx > 0) {
+              setImageIdx(imageIdx - 1);
+            }
+          }}
+        />
+        <DogCard dog={IMAGE_URLS[imageIdx]} />
+        <NavButtons
+          icon={"fa-chevron-right"}
+          onClick={() => {
+            if (imageIdx < IMAGE_URLS.length - 1) {
+              setImageIdx(imageIdx + 1);
+            }
+          }}
+        />
       </div>
     </div>
 
