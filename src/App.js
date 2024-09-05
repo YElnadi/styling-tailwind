@@ -11,6 +11,8 @@ import Counter from "./Counter";
 import Widget1 from "./Widget1";
 import Widget2 from "./Widget2";
 import Widget3 from "./Widget3";
+import IMAGE_URLS from "./ImageCarousel/Images";
+import DogCard from "./ImageCarousel/DogCard";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -38,17 +40,24 @@ function App() {
     // <Counter/>
 
     //conditional rendering practice
-    <div className="flex flex-col items-center m-4">
-      <Widget1/>
-      <Widget2/>
-      <Widget3/>
-    </div>
+    // <div className="flex flex-col items-center m-4">
+    //   <Widget1/>
+    //   <Widget2/>
+    //   <Widget3/>
+    // </div>
 
     // <div className="h-screen flex flex-col">
     //   <Header/>
     //   <SearchBar/>
     //   <Footer/>
     // </div>
+
+    // image carousel
+    <div className="flex flex-col justify-center items-center mt-4">
+      <div className="mb-4 text-cyan-300 text-3xl">Dog 1</div>
+      <DogCard dog={IMAGE_URLS[2]} />
+    </div>
+
     // <div className="flex flex-col items-center ">
     //   <QuoteBox1 quote={quote1} />
     //   <QuoteBox2 quote={quote2}/>
