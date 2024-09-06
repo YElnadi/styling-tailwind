@@ -14,7 +14,11 @@ const Paragraph = () => {
     >
       <div className=" w-full max-w-4xl p-4 flex flex-col justify-center items-center h-screen">
         {/* <button onClick={() => setIsDark(!isDark)}>Dark Mode</button> */}
-        <Toggle onClick={() => setIsDark(!isDark)}/>
+        <Toggle 
+        onClick={() => setIsDark(!isDark)}
+        label ="Dark Mode"
+        enabled={isDark}
+        />
         <p className="my-4">
           Coffee, often hailed as the elixir of wakefulness, has woven itself
           into the fabric of daily life for millions around the globe. Derived
