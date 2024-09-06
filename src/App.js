@@ -17,6 +17,7 @@ import NavButtons from "./ImageCarousel/NavButtons";
 import { useState } from "react";
 import Paragraph from "./DarkMode/Paragraph";
 import CookieRecipe from "./CookiesRecipe/CookieRecipe";
+import Modal from "./CookiesRecipe/Modal";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -37,6 +38,7 @@ const quote3 = {
 };
 function App() {
   const [imageIdx, setImageIdx] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     //light switch practice
     // <LightSwitch />
@@ -89,15 +91,20 @@ function App() {
       <div className="bg-orange-500 flex justify-center ">
         <div className="flex w-full max-w-4xl justify-between items-center px-8 py-4 text-orange-200">
           <div className="text-2xl">Yasmine's Recipe</div>
-          <button className="text-lg">
+          <button 
+          className="text-lg"
+          onClick={() => setIsModalOpen(true)}
+          >
             <i className="fa-solid fa-arrow-right-to-bracket mr-2 "></i>
             Sign-in
           </button>
         </div>
       </div>
-      <div>
+      
         <CookieRecipe />
-      </div>
+        {isModalOpen && <Modal onClose={()=>setIsModalOpen(false)}/>}
+       
+      
     </>
 
     // <div className="flex flex-col items-center ">
