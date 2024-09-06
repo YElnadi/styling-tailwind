@@ -16,6 +16,7 @@ import DogCard from "./ImageCarousel/DogCard";
 import NavButtons from "./ImageCarousel/NavButtons";
 import { useState } from "react";
 import Paragraph from "./DarkMode/Paragraph";
+import CookieRecipe from "./CookiesRecipe/CookieRecipe";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -81,7 +82,23 @@ function App() {
     // </div>
 
     // responsive design
-    <div><Paragraph/></div>
+    // <div><Paragraph/></div>
+
+    //Cookies recipes
+    <>
+      <div className="bg-orange-500 flex justify-center ">
+        <div className="flex w-full max-w-4xl justify-between items-center px-8 py-4 text-orange-200">
+          <div className="text-2xl">Yasmine's Recipe</div>
+          <button className="text-lg">
+            <i className="fa-solid fa-arrow-right-to-bracket mr-2 "></i>
+            Sign-in
+          </button>
+        </div>
+      </div>
+      <div>
+        <CookieRecipe />
+      </div>
+    </>
 
     // <div className="flex flex-col items-center ">
     //   <QuoteBox1 quote={quote1} />
