@@ -15,6 +15,7 @@ import IMAGE_URLS from "./ImageCarousel/Images";
 import DogCard from "./ImageCarousel/DogCard";
 import NavButtons from "./ImageCarousel/NavButtons";
 import { useState } from "react";
+import Paragraph from "./DarkMode/Paragraph";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -56,28 +57,31 @@ function App() {
     // </div>
 
     // image carousel
-    <div className="flex flex-col justify-center items-center mt-4">
-      <div className="mb-4 text-cyan-300 text-3xl">Dog {imageIdx + 1}</div>
-      <div className="flex justify-center items-center">
-        <NavButtons
-          icon={"fa-chevron-left"}
-          show={imageIdx > 0}
-          onClick={() => {
-            setImageIdx(imageIdx - 1);
-          }}
-        />
-        <div className="flex items-center justify-center m-4">
-          <DogCard dog={IMAGE_URLS[imageIdx]} />
-        </div>
-        <NavButtons
-          icon={"fa-chevron-right"}
-          show={imageIdx < IMAGE_URLS.length - 1}
-          onClick={() => {
-            setImageIdx(imageIdx + 1);
-          }}
-        />
-      </div>
-    </div>
+    // <div className="flex flex-col justify-center items-center mt-4">
+    //   <div className="mb-4 text-cyan-300 text-3xl">Dog {imageIdx + 1}</div>
+    //   <div className="flex justify-center items-center">
+    //     <NavButtons
+    //       icon={"fa-chevron-left"}
+    //       show={imageIdx > 0}
+    //       onClick={() => {
+    //         setImageIdx(imageIdx - 1);
+    //       }}
+    //     />
+    //     <div className="flex items-center justify-center m-4">
+    //       <DogCard dog={IMAGE_URLS[imageIdx]} />
+    //     </div>
+    //     <NavButtons
+    //       icon={"fa-chevron-right"}
+    //       show={imageIdx < IMAGE_URLS.length - 1}
+    //       onClick={() => {
+    //         setImageIdx(imageIdx + 1);
+    //       }}
+    //     />
+    //   </div>
+    // </div>
+
+    // responsive design
+    <div><Paragraph/></div>
 
     // <div className="flex flex-col items-center ">
     //   <QuoteBox1 quote={quote1} />
