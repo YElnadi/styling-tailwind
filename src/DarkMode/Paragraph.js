@@ -1,13 +1,20 @@
 import React from "react";
-import clsx from 'clsx'; 
-import {useState} from 'react'
+import clsx from "clsx";
+import { useState } from "react";
+import Toggle from "./Toggle";
 
 const Paragraph = () => {
-    const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(true);
   return (
-    <div className={clsx(" p-4 flex justify-center", isDark? "bg-neutral-800 text-neutral-200" : "bg-white text-black")}>
-      <div className=" w-full max-w-2xl flex flex-col justify-center items-center">
-        <button onClick={() => setIsDark(!isDark)}>Dark Mode</button>
+    <div
+      className={clsx(
+        "flex justify-center",
+        isDark ? "bg-neutral-800 text-neutral-200" : "bg-white text-black"
+      )}
+    >
+      <div className=" w-full max-w-4xl p-4 flex flex-col justify-center items-center h-screen">
+        {/* <button onClick={() => setIsDark(!isDark)}>Dark Mode</button> */}
+        <Toggle onClick={() => setIsDark(!isDark)}/>
         <p className="my-4">
           Coffee, often hailed as the elixir of wakefulness, has woven itself
           into the fabric of daily life for millions around the globe. Derived
