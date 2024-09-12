@@ -21,6 +21,8 @@ import Modal from "./CookiesRecipe/Modal";
 import Front from "./PlayingCards/Front";
 import Back from "./PlayingCards/Back";
 import PlayingCards from "./PlayingCards/PlayingCards";
+import PropertyItems from "./PropertyListings/PropertyItems";
+import properties from "./PropertyListings/properties";
 
 const quote1 = {
   text: "One of my most productive days was throwing away 1000 lines of code.",
@@ -40,8 +42,10 @@ const quote3 = {
   bio: "Pioneer of Algorithm Analysis",
 };
 function App() {
-  const [imageIdx, setImageIdx] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [imageIdx, setImageIdx] = useState(0);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const propertyDetails = properties.map((property, idx) => <PropertyItems property= {property} key={idx}/>
+  )
 
   return (
     //light switch practice
@@ -116,27 +120,35 @@ function App() {
     //   <QuoteBox3 quote={quote3}/>
     // </div>
 
-    <>
-      <div className="flex flex-col h-screen ">
-        <div
-          className=" font-mono text-4xl flex justify-center items-center
-        p-8 bg-red-100"
-        >
-          Play with us
-        </div>
-        <div className="flex justify-center  h-screen bg-red-100">
-          <PlayingCards value="A" icon="fa-spa" textColor="text-black" />
-          <PlayingCards value="Q" icon="fa-heart" textColor="text-red-500" />
-          <PlayingCards value="4" icon="fa-diamond" textColor="text-red-500" />
-          <PlayingCards value="10" icon="fa-cube" textColor="text-black" />
-          <PlayingCards
-            value="hehe"
-            icon="fa-burger"
-            textColor="text-amber-700"
-          />
-        </div>
-      </div>
-    </>
+
+
+
+//Playing cards
+    // <>
+    //   <div className="flex flex-col h-screen ">
+    //     <div
+    //       className=" font-mono text-4xl flex justify-center items-center
+    //     p-8 bg-red-100"
+    //     >
+    //       Play with us
+    //     </div>
+    //     <div className="flex justify-center  h-screen bg-red-100">
+    //       <PlayingCards value="A" icon="fa-spa" textColor="text-black" />
+    //       <PlayingCards value="Q" icon="fa-heart" textColor="text-red-500" />
+    //       <PlayingCards value="4" icon="fa-diamond" textColor="text-red-500" />
+    //       <PlayingCards value="10" icon="fa-cube" textColor="text-black" />
+    //       <PlayingCards
+    //         value="hehe"
+    //         icon="fa-burger"
+    //         textColor="text-amber-700"
+    //       />
+    //     </div>
+    //   </div>
+    // </>
+
+
+    //property listing
+    <div className="flex flex-wrap justify-center mt-16">{propertyDetails}</div>
   );
 }
 
