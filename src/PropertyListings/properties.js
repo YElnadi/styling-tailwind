@@ -103,6 +103,14 @@ const properties = [
       bathrooms: 1.5,
       imageUrl: "https://static-task-assets.react-formula.com/967392.jpg",
     },
+    {
+        address: "123 Main St",
+        city: "Springfield",
+        state: "IL",
+        bedrooms: 3,
+        bathrooms: 2,
+        imageUrl: "https://static-task-assets.react-formula.com/104799.jpg",
+      }
   ];
   
   export default properties;

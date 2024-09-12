@@ -9,7 +9,7 @@ const PropertyItems = (props) => {
     <div className="m-4 border-2 border-zinc rounded-lg">
       <img
         src={property.imageUrl}
-        className="w-[280px] h-[200px] object-cover rounded-t-lg"
+        className="w-72 h-64 object-cover rounded-t-lg"
       />
       <div className="m-2 text-xl">{property.address}</div>
       <div className="m-2 text-lg text-zinc-500">

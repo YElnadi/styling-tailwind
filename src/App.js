@@ -44,8 +44,9 @@ const quote3 = {
 function App() {
   // const [imageIdx, setImageIdx] = useState(0);
   // const [isModalOpen, setIsModalOpen] = useState(false);
-  const propertyDetails = properties.map((property, idx) => <PropertyItems property= {property} key={idx}/>
-  )
+  const propertyDetails = properties.map((property, idx) => (
+    <PropertyItems property={property} key={idx} />
+  ));
 
   return (
     //light switch practice
@@ -120,10 +121,7 @@ function App() {
     //   <QuoteBox3 quote={quote3}/>
     // </div>
 
-
-
-
-//Playing cards
+    //Playing cards
     // <>
     //   <div className="flex flex-col h-screen ">
     //     <div
@@ -146,9 +144,10 @@ function App() {
     //   </div>
     // </>
 
-
     //property listing
-    <div className="flex flex-wrap justify-center mt-16">{propertyDetails}</div>
+    <div className="flex justify-center mt-16">
+      <div className="w-full w-max-5xl flex flex-wrap justify-center">{propertyDetails}</div>
+    </div>
   );
 }
 
