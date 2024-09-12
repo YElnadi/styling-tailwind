@@ -11,12 +11,12 @@ const PropertyItems = (props) => {
         src={property.imageUrl}
         className="w-72 h-64 object-cover "
       />
-      <div className="m-2 text-xl">{property.address}</div>
-      <div className="m-2 text-lg text-zinc-500">
+      <div className="m-2 pl-2 text-xl">{property.address}</div>
+      <div className="m-2 pl-2 text-lg text-zinc-500">
         {property.city}, {property.state}
       </div>
       <div>
-        <div className="m-2 flex justify-between ">
+        <div className="m-2 pl-2 flex justify-between ">
           <div className="flex">
             <i className="fa-solid fa-bed text-2xl text-blue-500"></i>
             <div className="ml-2 text-zinc-500 text-xl">{property.bedrooms}</div>
