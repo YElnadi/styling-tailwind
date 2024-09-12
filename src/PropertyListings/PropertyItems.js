@@ -6,10 +6,10 @@ const PropertyItems = (props) => {
   console.log(property);
 
   return (
-    <div className="m-4 border-2 border-zinc rounded-lg">
+    <div className="m-4 border-2 border-zinc rounded-lg overflow-clip">
       <img
         src={property.imageUrl}
-        className="w-72 h-64 object-cover rounded-t-lg"
+        className="w-72 h-64 object-cover "
       />
       <div className="m-2 text-xl">{property.address}</div>
       <div className="m-2 text-lg text-zinc-500">
